@@ -1,0 +1,37 @@
+<div class="modal" tabindex="-1" id="exampleModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">ELIMINAR PRODUCTO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>ESTA ACCION NO SE PUEDE DESHACER</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" (click)="DeleteProduct()" data-bs-dismiss="modal">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterar sobre la lista de productos y mostrar cada uno en una fila -->
+            <tr *ngFor="let producto of productos | async">
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.descripcionCorta }}</td>
+                <td>{{ producto.valor }}</td>
+                <td><button type="submit" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="delete(producto)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

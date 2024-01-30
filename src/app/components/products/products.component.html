@@ -1,0 +1,27 @@
+<div class="productsContainer">
+
+    <div class="introProducts">
+        <div class="introText">
+            <h1>Descubre Tu Futuro En <span class="en-linea">línea</span></h1>
+            <h2>Explora nuestras páginas web listas para usar</h2>
+        </div>
+        <div class="container">
+            <div *ngFor="let item of itemsArray; let i = index" class="card"
+                [ngClass]="{'center-card': i === activeIndex}">
+                <div class="card-body" routerLink="/producto" style="cursor: pointer;">
+                    <img [src]="item.imagen" alt="" class="img-fluid">
+                    <h5 class="card-title">{{ item.nombre }}</h5>
+                    <p class="card-text">{{ item.descripcion }}</p>
+                    <p class="card-text">{{ item.valor | currency }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="titulo-ventajas">
+        <h2>Experimenta el Poder de Firebase</h2>
+    </div>
+    <div class="firebase">
+        <app-about-firebase></app-about-firebase>
+    </div>
+
+</div>

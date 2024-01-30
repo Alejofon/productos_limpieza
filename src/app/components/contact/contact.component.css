@@ -1,0 +1,56 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    /* Fondo del footer */
+    color: #fff;
+    /* Color del texto del footer */
+    padding: 30px 0;
+    /* Ajusta el espaciado superior e inferior según tus necesidades */
+    text-align: center;
+    
+}
+
+.footerContainer{
+    background-color: rgb(53, 53, 53);
+    margin-top: 20%;
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto, .redes-sociales {
+    text-align: left;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin: 10%;
+}
+
+.contacto h3,
+.redes-sociales h3 {
+    font-size: 2.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 30px;
+}
+
+.contacto a,
+.redes-sociales a {
+    color: #fff;
+    /* Color de los enlaces */
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+.contacto a:hover,
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+strong{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+

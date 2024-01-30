@@ -1,0 +1,61 @@
+
+<div class="modal modal-xl"  tabindex="-1" id="modalUpdate">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modificar producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class='card w-100 mb-1'  *ngIf="showMod === 'show'" [formGroup]="product">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Caracteristicas</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" type="text"  formControlName="nameProduct" ></textarea></td>
+                            <td><textarea class="form-control" aria-label="With textarea" formControlName="descriptionProduct"></textarea></td>
+                            <td><textarea class="form-control" type="text" formControlName="caracteristicas"></textarea></td>
+                            <td style="width: 10%;"><input class="form-control" type="text" formControlName="coustProduct"></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-info" type="submit" (click)="update()" data-bs-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container mt-2">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Caracteristicas</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos | async">
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.descripcionCorta }}</td>
+                <td>{{ producto.caracteristicas }}</td>
+                <td>{{ producto.valor }}</td>
+                <td><button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalUpdate"(click)="modProduct(producto)">Modificar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

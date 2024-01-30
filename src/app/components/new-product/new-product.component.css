@@ -1,0 +1,25 @@
+body {
+    background-color: #E6E6E6;
+}
+
+a{
+    color: black;
+    cursor: pointer;
+}
+.nav-link:hover {
+    color: lightseagreen;
+  }
+.modificar {
+    height: 75vh;
+    /* O la altura que desees */
+    overflow-y: auto;
+    /* Habilita el scroll vertical si el contenido excede el alto */
+    float: center;
+}
+.eliminar {
+    height: 75vh;
+    /* O la altura que desees */
+    overflow-y: auto;
+    /* Habilita el scroll vertical si el contenido excede el alto */
+    float: center;
+}

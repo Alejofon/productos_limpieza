@@ -1,0 +1,14 @@
+<div class="container mt-4" data-bs-spy="scroll">
+    <div class="row">
+      <div class="col-md-4 mt-4" *ngFor="let item of items$ | async">
+        <div class="card">
+          <div class="card-body">
+            <img [src]="item.imagen" alt="" class="img-fluid">
+            <h5 class="card-title">{{ item.nombre }}</h5>
+            <p class="card-text">{{ item.descripcion }}</p>
+            <p class="card-text">{{ item.valor | currency }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

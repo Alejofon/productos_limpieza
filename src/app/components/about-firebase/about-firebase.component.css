@@ -1,0 +1,225 @@
+.component-container {
+    background: linear-gradient(rgb(0, 0, 0), rgb(95, 95, 95));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 37, 37, 0.514);
+    /* Cambia el valor de alfa para ajustar la opacidad */
+    pointer-events: none;
+    /* Permite interactuar con elementos debajo */
+
+}
+
+
+.cohete {
+    position: absolute;
+    width: 400px;
+    /* Ancho de 200 píxeles */
+    height: 300px;
+    /* Alto de 150 píxeles */
+    top: -150px;
+    left: 76%;
+}
+
+.cohete {
+    transform: translate(0, 0);
+    /* Vuelve la imagen a su posición original */
+    transition: transform 0.3s ease-in-out;
+    /* Agrega una transición suave al desplazamiento */
+    animation: moveAnimation 3s infinite alternate;
+}
+
+.cohete:hover {
+    transform: translate(5px, 5px);
+    /* Desplaza la imagen 5 píxeles hacia la derecha y abajo al pasar el cursor sobre ella */
+}
+
+
+h1 {
+    color: aliceblue;
+    font-size: 1.8vw;
+}
+
+p {
+    color: aliceblue;
+    font-size: 1vw;
+}
+
+li {
+    color: aliceblue;
+    font-size: 1vw;
+}
+
+.firebase_text {
+    position: absolute;
+    display: flex;
+    top: 10%;
+    left: 25%;
+    max-width: 60%;
+}
+
+.firebase_text h1 {
+    position: absolute;
+    margin-top: 8%;
+
+}
+
+.firebaseDescription {
+    position: absolute;
+    margin-top: 15%;
+    text-align: left;
+}
+
+.firebaseCaracterist1 {
+    margin-top: 30%;
+
+}
+
+.firebaseCaracterist2 {
+    margin-top: 30%;
+
+}
+
+strong {
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 96%;
+    left: 7%;
+}
+
+
+
+
+/* Establecer un tamaño mínimo y máximo para el texto */
+
+
+@media (min-width: 500px) and (max-width:700px) {
+
+    .firebase_text h1 {
+        position: absolute;
+        margin-top: -10%;
+        font-size: 3vh;
+    }
+
+    
+    .firebaseDescription {
+        position: absolute;
+        margin-top: 15%;
+        text-align: left;
+    }
+    
+    .firebaseCaracterist1 {
+        margin-top: 50%;
+    
+    }
+    
+    .firebaseCaracterist2 {
+        margin-top: 50%;
+    
+    }
+    .component-container {
+        min-height: 120vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+
+    .cohete {
+        position: absolute;
+        width: 200px;
+        /* Ancho de 200 píxeles */
+        height: 100px;
+        /* Alto de 150 píxeles */
+        top: -40px;
+        left: 60%;
+    }
+
+}
+
+@media (min-width: 701px) and (max-width:800px) {
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+        /* Reducir el tamaño del texto para pantallas más grandes */
+    }
+
+    .component-container {
+        min-height: 70vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+}
+
+
+
+@media (min-width: 801px) and (max-width: 900px) {
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+        /* Reducir el tamaño del texto para pantallas más grandes */
+    }
+
+    .component-container {
+        min-height: 85vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+}
+
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 2vw;
+        /* Reducir el tamaño del texto para pantallas más grandes */
+    }
+
+    .component-container {
+        min-height: 85vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+}

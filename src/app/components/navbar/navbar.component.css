@@ -1,0 +1,40 @@
+#navbar {
+    transition: background-color 0.3s, opacity 0.3s;
+    /* Animación de transición */
+    background-color: transparent;
+    /* Fondo inicial transparente */
+    opacity: 0.9;
+    /* Opacidad inicial */
+}
+
+#navbar.dark {
+    background-color: rgba(0, 0, 0, 0.774);
+    /* Fondo oscuro traslúcido */
+    opacity: 1;
+    /* Opacidad completa al hacer scroll */
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ajusta el índice z según sea necesario */
+}
+
+#navbar {
+    font-family: Verdana;
+}
+
+a {
+    color: white;
+    font-family: Verdana;
+    font-size: large;
+}
+
+.navbar-toggler {
+    background-color: white;
+    /* Cambia el color de fondo del botón */
+    border-color: white;
+    /* Cambia el color del borde del botón */
+}

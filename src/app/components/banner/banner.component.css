@@ -1,0 +1,190 @@
+/*.component-container {
+    background-video: url(https://firebasestorage.googleapis.com/v0/b/productos-4a18e.appspot.com/o/vista%2Fvideo%2Fcar_-_37692%20(1080p).mp4?alt=media&token=4910ddcc-bb30-40cf-8706-d5394aaa3606);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}*/
+.component-container {
+    position: relative;
+    background-color: black;
+    z-index: -1000;
+}
+
+#video-background {
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    max-width: 100%;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 30, 90, 0.767);
+    /* Cambia el valor de alfa para ajustar la opacidad */
+    pointer-events: none;
+    /* Permite interactuar con elementos debajo */
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 1.8vw;
+}
+
+p {
+    color: aliceblue;
+    font-size: 19px;
+}
+.text {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    max-width: 60%;
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 96%;
+    left: 7%;
+}
+
+
+
+
+/* Establecer un tamaño mínimo y máximo para el texto */
+@media (max-width: 500px) {
+    .text {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    p {
+        font-size: 19px;
+        /* Tamaño mínimo para pantallas muy pequeñas */
+    }
+
+    .component-container {
+        position:relative;
+        max-height: 50vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+    #video-background {
+        min-width: 100vh;
+    }
+    .image-overlay{
+        height: 80.5%;
+    }
+
+
+}
+
+@media (min-width: 500px) and (max-width:700px) {
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+        /* Reducir el tamaño del texto para pantallas más grandes */
+    }
+
+    .component-container {
+        min-height: 70vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+}
+
+@media (min-width: 701px) and (max-width:800px) {
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+        /* Reducir el tamaño del texto para pantallas más grandes */
+    }
+
+    .component-container {
+        min-height: 70vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+}
+
+
+
+@media (min-width: 801px) and (max-width: 900px) {
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+        /* Reducir el tamaño del texto para pantallas más grandes */
+    }
+
+    .component-container {
+        min-height: 85vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+}
+
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 2vw;
+        /* Reducir el tamaño del texto para pantallas más grandes */
+    }
+
+    .component-container {
+        min-height: 85vh;
+        /* Ajusta la altura según tus preferencias */
+    }
+
+}
+

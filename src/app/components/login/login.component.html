@@ -1,0 +1,22 @@
+<body class="">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card w-50 mt-5">
+          <div class="card-body">
+            <h5 class="card-title">Inicio de Sesión</h5>
+            <form [formGroup]="admin" (ngSubmit)="login()">
+              <div class="mb-1">
+                <label for="usuario" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="usuario"  placeholder="name@example.com" formControlName="email">
+              </div>
+              <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" placeholder="Ingrese su contraseña" formControlName="password">
+              </div>
+              <button type="submit" class="btn btn-info btn-block"  >Iniciar Sesión</button>
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+
+  

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>administración</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+                <div class="card mt-5">
+                    <div class="card-header" style="background-color: #0489B1 ;">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" [class.active]="pestanaActiva === 'agregar'" (click)="mostrarAgregacion()">Agregar Producto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" [class.active]="pestanaActiva === 'modificar'" (click)="mostrarModificacion()">Modificar Producto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" [class.active]="pestanaActiva === 'eliminar'" (click)="mostrarEliminacion()">Eliminar Producto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div *ngIf="accion === 'agregar'">
+                            <form [formGroup]="createProduct" (ngSubmit)="addProduct()">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre del Producto</label>
+                                    <input type="text" class="form-control" id="nombre"
+                                        placeholder="Ingrese el nombre del producto" formControlName="nameProduct">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripción del Producto</label>
+                                    <textarea class="form-control" id="descripcion"
+                                        placeholder="Ingrese la descripción del producto"
+                                        formControlName="descriptionProduct"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Caracteristicas</label>
+                                    <textarea class="form-control" id="descripcion"
+                                        placeholder="Ingrese la descripción del producto"
+                                        formControlName="caracteristicas"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="valor" class="form-label">Valor del Producto</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control"
+                                            aria-label="Dollar amount (with dot and two decimal places)"
+                                            formControlName="coustProduct">
+                                    </div>
+
+                                </div>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" #imagen (change)="onFileChange($event)">
+                                    <button class="btn btn-outline-secondary" type="submit"
+                                        [disabled]="!imgVer">Cargar</button>
+                                </div>
+                                <div *ngIf="submitted && createProduct.invalid"
+                                    class="alert alert-warning alert-dismissible fade show mt-2" role="alert">
+                                    <strong>ALERTA!</strong> Todos los campos son obligatorios
+                                    <button type="button" class="btn-close" aria-label="Close"></button>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <div class='modificar' *ngIf="accion === 'modificar'">
+                            <app-update-product></app-update-product>
+
+                        </div>
+                        <div class='eliminar' *ngIf="accion === 'eliminar'">
+                            <app-delete-product></app-delete-product>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
